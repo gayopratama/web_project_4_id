@@ -1,16 +1,22 @@
 # Proyek 4: Di Sekitar Amerika Serikat
 
-### Ringkasan
+### Tentang Project
 
-* Figma
-* Gambar
+Ini adalah project membuat halaman media sosial yang menampilkan profile, beberapa feeds foto alam dan caption. halaman ini juga bisa menampilkan pop-up form apabila ed button di click. tugas ini dibuat guna menyelesaikan modul pembelajaran Sprint 4: JavaScript Dasar.
 
-**Figma**
 
-* [Tautan ke proyek di Figma](https://www.figma.com/file/SurN1jaeEQIhuZEDMhmWWf/Sprint-4-Around-The-U.S.-desktop-mobile?node-id=0%3A1)
+### Teknik yang digunakan
+1. Struktur File & Methodologi BEM
+2. Tag Semantik
+3. Flexbox
+4. Pop-Up Form
+5. Media Queri layar Ponsel
+6. Figma based design
+7. onclick button.
 
-**Gambar**
 
-Cara Anda melakukannya di tempat kerja adalah dengan mengekspor gambar langsung dari Figma — kami menyarankan melakukan hal tersebut agar Anda berlatih lebih banyak. Jangan lupa untuk mengoptimalkannya [di sini](https://tinypng.com/), sehingga proyek Anda dapat dimuat dengan lebih cepat.
+**Github**
 
-Selamat bersenang-senang dengan JavaScript!
+* [Tautan ke proyek di Github](https://github.com/gayopratama/web_project_4_id)
+
+

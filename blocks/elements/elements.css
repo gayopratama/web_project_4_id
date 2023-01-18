@@ -1,0 +1,8 @@
+.elements {
+    width: 880px;
+    height: 770px;
+    margin: 45px auto 0px 200px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}

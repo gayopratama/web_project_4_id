@@ -1,0 +1,10 @@
+.element__like-btn {
+    width: 21px;
+    position: absolute;
+    top: 312px;
+    right: 20px;
+}
+
+.element__like-btn:hover {
+    opacity:0.6 ;
+}

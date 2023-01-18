@@ -1,0 +1,123 @@
+@media screen and (max-width: 320px) {
+    .page {
+        width: 320px;
+        height: 2814px;
+        margin: 0 auto 0 auto;
+    }
+
+    .header__logo {
+        width: 126px;
+        height: 24px;
+        margin: 28px 0px 0px 27px;
+    }
+
+    .header__line {
+        height: 0;
+        width: 320px;
+        margin: 30px 0px 0px 0px;
+     }
+
+    .profile {
+        display: flex;
+        flex-direction: column;
+        height: 286px;
+        width: 282px;
+        margin-left: 19px;
+        position: relative;
+        margin-bottom: 36px;
+    }
+
+    .profile__avatar {
+        margin: 0px auto 26px auto;
+    }
+    
+    .profile__info_name {
+        margin-top: 0px;
+        font-size: 22px;
+        line-height: 22px;
+        width: 220px;
+    }
+
+    .profile__info_bio {
+        font-size: 14px;
+        line-height: 16px;
+        width: 220px;
+        text-align: center;
+        margin: 14px 0px 0px 0px;
+    }
+
+    .profile__edit-btn {
+        position: absolute;
+        top: 110px;
+        right: 27px;
+        height: 18px;
+        width: 18px;
+    }
+
+    .profile__rectangle {
+        position: absolute;
+        top: 236px;
+        left: 0px;
+        width: 280px;
+    }
+
+    .profile__rectangle_add-btn {
+        position: absolute;
+        left: 60px;
+    }
+
+    .elements {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        width: 282px;
+        margin: 36px auto auto auto;
+    }
+    
+    .footer {
+        position: absolute;
+        bottom: 36px;
+        left: 0px;
+        width: 282px;
+        margin-left: 19px;
+        font-size: 14px;
+    }
+
+    .form-popup {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      
+      }
+
+      .form-container .btn {
+        width: 238px;
+        margin-left: 22px;
+        margin-top: 46px;
+      }
+
+      .form-container {
+        width: 282px;
+        height: 322px;
+      }
+      .form__line {
+        width: 238px;
+      }
+      .form-container .cancel {
+        position: absolute;
+        bottom: 325px;
+        left: 200px;
+        width: 26px;
+        }
+
+    .edit-profile {
+        
+        padding-top: 25px;
+        padding-left: 22px;
+        }
+
+    .form-container input[type=text], .form-container input[type=text] {
+        width: 80%;   
+        }
+}
+
