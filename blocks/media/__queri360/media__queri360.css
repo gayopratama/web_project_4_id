@@ -2,7 +2,7 @@
     .page {
         width: 320px;
         height: 2814px;
-        margin: 0 auto 0 auto;
+        
     }
 
     .header__logo {
@@ -83,40 +83,41 @@
         font-size: 14px;
     }
 
-    .form-popup {
+    .edit__form {
         position: absolute;
         top: 0px;
         left: 0px;
-      
       }
 
-      .form-container .btn {
+      .form__submit_btn {
         width: 238px;
         margin-left: 22px;
         margin-top: 46px;
       }
 
-      .form-container {
+      .form {
         width: 282px;
         height: 322px;
       }
+      
       .form__line {
         width: 238px;
       }
-      .form-container .cancel {
+
+      .form__close_btn {
         position: absolute;
         bottom: 325px;
-        left: 200px;
+        left: 230px;
         width: 26px;
+        background-color: none;
         }
 
-    .edit-profile {
-        
+    .form__edit_profile {
         padding-top: 25px;
         padding-left: 22px;
         }
 
-    .form-container input[type=text], .form-container input[type=text] {
+    .form__input {
         width: 80%;   
         }
 }

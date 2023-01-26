@@ -1,107 +1,110 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <link rel="script" href="script.js">
-    <title>Project 4</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link rel="script" href="script.js">
+  <title>Project 4</title>
 </head>
-<body>
-   <main class="page">
-    <header class="header">
-      <img class="header__logo" src="./image/Vector.svg" alt="logo vector around US">
-      <hr class="header__line">
-    </header>
-    
 
-    <section class="profile">
-        <div class="profile__avatar">
-            <img class="profile__avatar_ellipse" src="./image/avatar.jpg" alt="profile avatar">
-        </div>
-        <div class="profile__info">
-            <p class="profile__info_name">Jacques Cousteau</p>
-            <p class="profile__info_bio">Penjelajah</p>
-        </div>
-        <a class="profile__edit-btn" onclick="openForm()" href="#">
-            <img  src="./image/EditButton.png" alt="edit button logo">
-        </a>
-        <a href="#">
-            <div class="profile__rectangle">
-                <img class="profile__rectangle_add-btn" src="./image/addsign.png" alt="Add Button logo">
-            </div>
-        </a>
-        <div class="form-popup" id="myForm">
-          <form action="/action_page.php" class="form-container">
-            <h1 class="edit-profile">Edit profile</h1>
-            <label for="Name"><b>Nama</b></label>
-            <input type="text" value="Jacques Cousteau" name="name" required>
-            <hr class="form__line">
+<body class="page">
+  <header class="header">
+    <img class="header__logo" src="./image/Vector.svg" alt="logo vector around US">
+    <hr class="header__line">
+  </header>
+
+
+  <section class="profile">
+    <div class="profile__avatar">
+      <img class="profile__avatar_ellipse" src="./image/avatar.jpg" alt="profile avatar">
+    </div>
+    <div class="profile__info">
+      <p class="profile__info_name">Jacques Cousteau</p>
+      <p class="profile__info_bio">Penjelajah</p>
+    </div>
+    <button class="profile__edit-btn" onclick="openForm()">
+      <img src="./image/EditButton.png" alt="edit button logo">
+    </button>
+    <a href="#">
+      <div class="profile__rectangle">
+        <img class="profile__rectangle_add-btn" src="./image/addsign.png" alt="Add Button logo">
+      </div>
+    </a>
+    <div class="edit__form">
+      <form class="form">
+        <h1 class="form__edit_profile">Edit profile</h1>
+        <label for="Name"></label>
+        <input class="form__input" type="text" value="Jacques Cousteau" name="name">
+        <hr class="form__line">
+
+        <label for="Job"></label>
+        <input class="
+            form__input" type="text" value="Penjelajah" name="job">
+        <hr class="form__line">
+
         
-            <label for="Bio"><b>Bio</b></label>
-            <input type="text" value="Penjelajah" name="bio" required>
-            <hr class="form__line">          
-    
-            <button type="submit" class="btn">Simpan</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">
-              <img src="./image/Close-Icon.png" alt="close icon">
-          </button>
-          </form>
-        </div>
-    </section>
+        <button type="button" class="form__close_btn" onclick="closeForm()">
+          <img src="./image/Close-Icon.png" alt="close icon">
+        </button>
+      </form>
+      <button class="form__submit_btn" onclick="saveForm()">Simpan</button>
+    </div>
+  </section>
 
-    <section class="elements">
-        <div class="element">
-          <img class="element__foto" src="./image/kirill-pershin-1088404-unsplash.png" alt="view kiril pershin">
-            <p class="element__caption">Lembah Yosemite</p>
-            <a class="element__like-btn" href="">
-                <img src="./image/like-btn.svg" alt="logo like button">          
-            </a>
-        </div>
-        <div class="element">
-            <img class="element__foto" src="./image/kirill-pershin-1404681-unsplash.png" alt="view view danau Louise">
-              <p class="element__caption">Danau Louise</p>
-              <a class="element__like-btn" href="">
-                <img src="./image/like-btn.svg" alt="logo like button">          
-            </a>          
-        </div>
-          <div class="element">
-            <img class="element__foto" src="./image/kirill-pershin-1556355-unsplash.png" alt="view pegunungan Bald">
-              <p class="element__caption">Pegunungan Bald</p>
-              <a class="element__like-btn" href="">
-                <img src="./image/like-btn.svg" alt="logo like button">          
-            </a>          
-        </div>
-          <div class="element">
-            <img class="element__foto" src="./image/kirill-pershin-1404681-unsplash (1).png" alt="view gunung latemar">
-              <p class="element__caption">Gunung Latemar</p>
-              <a class="element__like-btn" href="">
-                <img src="./image/like-btn.svg" alt="logo like button">          
-            </a>          
-        </div>
-          <div class="element">
-            <img class="element__foto" src="./image/kirill-pershin-1556355-unsplash (1).png" alt="view Vnoise">
-              <p class="element__caption">Vanoise Nationa…</p>
-              <a class="element__like-btn" href="">
-                <img src="./image/like-btn.svg" alt="logo like button">          
-            </a>          
-        </div>
-          <div class="element">
-            <img class="element__foto" src="./image/kirill-pershin-1088404-unsplash (1).png" alt="view Lago di braies">
-              <p class="element__caption">Lago di Braies</p>
-              <a class="element__like-btn" href="">
-                <img src="./image/like-btn.svg" alt="logo like button">          
-            </a>         
-         </div>
-    </section>
+  <section class="elements">
+    <div class="element">
+      <img class="element__foto" src="./image/kirill-pershin-1088404-unsplash.png" alt="view kiril pershin">
+      <p class="element__caption">Lembah Yosemite</p>
+      <a class="element__like-btn" href="">
+        <img src="./image/like-btn.svg" alt="logo like button">
+      </a>
+    </div>
+    <div class="element">
+      <img class="element__foto" src="./image/kirill-pershin-1404681-unsplash.png" alt="view view danau Louise">
+      <p class="element__caption">Danau Louise</p>
+      <a class="element__like-btn" href="">
+        <img src="./image/like-btn.svg" alt="logo like button">
+      </a>
+    </div>
+    <div class="element">
+      <img class="element__foto" src="./image/kirill-pershin-1556355-unsplash.png" alt="view pegunungan Bald">
+      <p class="element__caption">Pegunungan Bald</p>
+      <a class="element__like-btn" href="">
+        <img src="./image/like-btn.svg" alt="logo like button">
+      </a>
+    </div>
+    <div class="element">
+      <img class="element__foto" src="./image/kirill-pershin-1404681-unsplash (1).png" alt="view gunung latemar">
+      <p class="element__caption">Gunung Latemar</p>
+      <a class="element__like-btn" href="">
+        <img src="./image/like-btn.svg" alt="logo like button">
+      </a>
+    </div>
+    <div class="element">
+      <img class="element__foto" src="./image/kirill-pershin-1556355-unsplash (1).png" alt="view Vnoise">
+      <p class="element__caption">Vanoise Nationa…</p>
+      <a class="element__like-btn" href="">
+        <img src="./image/like-btn.svg" alt="logo like button">
+      </a>
+    </div>
+    <div class="element">
+      <img class="element__foto" src="./image/kirill-pershin-1088404-unsplash (1).png" alt="view Lago di braies">
+      <p class="element__caption">Lago di Braies</p>
+      <a class="element__like-btn" href="">
+        <img src="./image/like-btn.svg" alt="logo like button">
+      </a>
+    </div>
+  </section>
 
-    <footer class="footer">
-            © 2021 Around The U.S.
-    </footer>
+  <footer class="footer">
+    © 2021 Around The U.S.
+  </footer>
 
-   </main>
-   <script src="script.js">
-   </script> 
+  <script src="script.js">
+  </script>
 </body>
+
 </html>

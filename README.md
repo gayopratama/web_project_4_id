@@ -12,7 +12,8 @@ Ini adalah project membuat halaman media sosial yang menampilkan profile, bebera
 4. Pop-Up Form
 5. Media Queri layar Ponsel
 6. Figma based design
-7. onclick button.
+7. Query Selector DOM.
+8. Event Listener.
 
 
 **Github**

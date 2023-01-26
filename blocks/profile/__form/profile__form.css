@@ -1,35 +1,4 @@
-.edit-profile {
-    color: #000000;
-    font-weight: 900;
-    font-size: 24px;
-    line-height: 29px;
-    padding-top: 36px;
-    padding-left: 34px;
-}
-
-
-.open-button {
-    background-color: #555;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    opacity: 0.8;
-    position: fixed;
-    bottom: 23px;
-    right: 28px;
-    width: 280px;
-  }
-  
-  .form-popup {
-    display: none;
-    position: absolute;
-    top: 184px;
-    left: 410px;
-    z-index: 9;
-  }
-  
-  .form-container {
+.form {
     width: 430px;
     height: 330px;
     background: #FFFFFF;
@@ -37,9 +6,9 @@
     border-radius: 10px;
   }
   
-  .form-container input[type=text], .form-container input[type=text] {
+  .form__input {
     width: 90%;
-    margin: 0px 0 36px 34px;
+    margin: 20px 0 36px 34px;
     border: none;
     margin-bottom: 0px;
     font-family: 'Inter';
@@ -50,11 +19,12 @@
     color: #000000;
   }
   
-  .form-container input[type=text]:focus, .form-container input[type=text]:focus {
+  .form__input:focus {
     outline: none;
   }
   
-  .form-container .btn {
+  .form__submit_btn {
+    
     background-color: #000000;
     color: white;
     padding: 16px 20px;
@@ -62,19 +32,23 @@
     cursor: pointer;
     width: 358px;
     opacity: 1;
-    margin-left: 34px;
-    margin-top: 36px;
+    position: absolute;
+    bottom: 40px;
+    left: 30;
+    margin-left: 36px;
   }
   
-  .form-container .cancel {
+  .form__close_btn {
     position: absolute;
-    bottom: 300px;
-    left: 400px;
+    bottom: 340px;
+    left: 430px;
     width: 40px;
-    background-color: none;
+    background-color: #000;
+    cursor: pointer;
+    border: none;
     }
   
-  .form-container .btn:hover, .cancel {
+  .form__submit_btn:hover, .form__close_btn:hover {
     opacity: .8;
   }
 
@@ -86,3 +60,21 @@
     opacity: 0.2;
     border: 1px solid #000000;
   }
+
+  .form__edit_profile {
+    color: #000000;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    padding-top: 36px;
+    padding-left: 34px;
+}
+  
+  .edit__form {
+    display: none;
+    position: absolute;
+    top: 184px;
+    left: 410px;
+    z-index: 9;
+  }
+  
