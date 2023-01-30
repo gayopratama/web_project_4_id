@@ -1,8 +1,7 @@
 .element__like-btn {
     width: 21px;
-    position: absolute;
-    top: 312px;
-    right: 20px;
+    height: 19px;
+    margin-top: 30px;
 }
 
 .element__like-btn:hover {

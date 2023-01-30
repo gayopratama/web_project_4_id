@@ -5,3 +5,9 @@
     border-radius: 10px;
     position: relative;
 }
+
+.element__caption_container {
+    display: flex;
+    justify-content: space-between;
+    width: 270px;
+}
