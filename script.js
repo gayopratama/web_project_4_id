@@ -1,6 +1,7 @@
 const openBtn = document.querySelector(".profile__edit-btn");
 const closeBtn = document.querySelector(".form__close_btn")
 const saveBtn = document.querySelector(".form__submit_btn")
+const likeBtns = document.querySelectorAll(".element__like-btn")
 
 openBtn.addEventListener("click", openForm);
 closeBtn.addEventListener("click", closeForm);
@@ -28,3 +29,19 @@ function saveForm() {
 
 
 document.querySelector(".form").addEventListener("submit", saveForm);
+
+console.log(likeBtns)
+likeBtns.forEach(posesButtons)
+
+
+function posesButtons(item) {
+  console.log(item)
+item.addEventListener("click",function(e) {
+  item.classList.toggle("element__like-btn_active")
+
+} )
+}
+
+
+
+
