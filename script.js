@@ -37,7 +37,6 @@ function posesButtons(item) {
   console.log(item)
 item.addEventListener("click",function(e) {
   item.classList.toggle("element__like-btn_active")
-
 } )
 }
 
