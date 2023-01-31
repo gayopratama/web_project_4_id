@@ -21,16 +21,15 @@ function saveForm() {
   let name = document.querySelector('input[name="name"]').value;
   let job = document.querySelector('input[name="job"]').value;
   let displayName = document.querySelector('.profile__info_name');
-  let displayBio = document.querySelector('.profile__info_bio');
+  let displayJob = document.querySelector('.profile__info_job');
   displayName.innerHTML = name;
-  displayBio.innerHTML = job;
+  displayJob.innerHTML = job;
   closeForm();
 }
 
 
 document.querySelector(".form").addEventListener("submit", saveForm);
 
-console.log(likeBtns)
 likeBtns.forEach(posesButtons)
 
 
