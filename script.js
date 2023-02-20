@@ -1,6 +1,6 @@
 const openBtn = document.querySelector(".profile__edit-btn");
-const closeBtn = document.querySelector(".form__close_btn")
-const saveBtn = document.querySelector(".form__submit_btn")
+const closeBtn = document.querySelector(".profile__edit-close-btn")
+const saveBtn = document.querySelector(".profile__edit-submit-btn")
 let likeBtns = document.querySelectorAll(".element__like-btn")
 const addBtn = document.querySelector(".profile__rectangle")
 const cardCloseBtn = document.querySelector(".add__form_close-btn")
@@ -42,11 +42,7 @@ function saveForm() {
   closeForm();
 }
 
-
-document.querySelector(".form").addEventListener("submit", saveForm);
  
-
-
 document.querySelector('input[name="job"]').addEventListener("keyup", function(e) {
   if (e.key == 'Enter' || e.keyCode === 13) {
     saveForm();

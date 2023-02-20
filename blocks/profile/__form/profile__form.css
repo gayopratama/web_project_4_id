@@ -11,8 +11,7 @@
   border-radius: 10px;
 }
 
-  
-  .form__input {
+.profile__edit-form-input {
     width: 90%;
     margin: 20px 0 36px 34px;
     border: none;
@@ -25,12 +24,11 @@
     color: #000000;
   }
   
-  .form__input:focus {
+.profile__edit-form-input:focus {
     outline: none;
   }
   
-  .form__submit_btn {
-    
+.profile__edit-submit-btn { 
     background-color: #000000;
     color: white;
     padding: 16px 20px;
@@ -44,7 +42,7 @@
     margin-left: 36px;
   }
   
-  .form__close_btn {
+  .profile__edit-close-btn {
     position: absolute;
     bottom: 340px;
     left: 430px;
@@ -54,11 +52,11 @@
     border: none;
     }
   
-  .form__submit_btn:hover, .form__close_btn:hover {
+  .profile__edit-close-btn:hover, .profile__edit-close-btn:hover {
     opacity: .8;
   }
 
-  .form__line {
+  .profile__edit-form-line {
     width: 358px;
     height: 0px;
     left: 461px;
@@ -91,9 +89,8 @@
         margin-top: 46px;
       }
 
-    
-
-      .form__line {
+  
+      .profile__edit-form-line {
         width: 238px;
       }
 
@@ -110,7 +107,7 @@
         padding-left: 22px;
         }
 
-    .form__input {
+    .profile__edit-form-input {
         width: 80%;   
         }
 }
