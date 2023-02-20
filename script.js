@@ -24,19 +24,19 @@ function cardCloseForm() {
 
 
 function openForm() {
-  document.querySelector(".edit__form").style.display = "block";
+  document.querySelector(".profile__edit-form").style.display = "block";
 }
 
 function closeForm() {
-  document.querySelector(".edit__form").style.display = "none";
+  document.querySelector(".profile__edit-form").style.display = "none";
 }
 
 
 function saveForm() {
   let name = document.querySelector('input[name="name"]').value;
   let job = document.querySelector('input[name="job"]').value;
-  let displayName = document.querySelector('.profile__info_name');
-  let displayJob = document.querySelector('.profile__info_job');
+  let displayName = document.querySelector('.profile__info-name');
+  let displayJob = document.querySelector('.profile__info-job');
   displayName.innerHTML = name;
   displayJob.innerHTML = job;
   closeForm();

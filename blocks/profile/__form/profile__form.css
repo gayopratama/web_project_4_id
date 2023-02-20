@@ -1,10 +1,16 @@
-.form {
-    width: 430px;
-    height: 330px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
-  }
+.profile__edit-form {
+  display: none;
+  position: absolute;
+  top: 184px;
+  left: 410px;
+  z-index: 9;
+  width: 430px;
+  height: 330px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
   
   .form__input {
     width: 90%;
@@ -61,7 +67,7 @@
     border: 1px solid #000000;
   }
 
-  .form__edit_profile {
+  .profile__edit-form-title {
     color: #000000;
     font-weight: 900;
     font-size: 24px;
@@ -70,20 +76,13 @@
     padding-left: 34px;
 }
   
-  .edit__form {
-    display: none;
-    position: absolute;
-    top: 184px;
-    left: 410px;
-    z-index: 9;
-  }
-  
-
   @media screen and (max-width: 320px) {
-    .edit__form {
+    .profile__edit-form {
         position: absolute;
         top: 0px;
         left: 0px;
+        width: 282px;
+        height: 322px;
       }
 
       .form__submit_btn {
@@ -92,10 +91,7 @@
         margin-top: 46px;
       }
 
-      .form {
-        width: 282px;
-        height: 322px;
-      }
+    
 
       .form__line {
         width: 238px;
@@ -109,7 +105,7 @@
         width: 26px;
         }
 
-    .form__edit_profile {
+    .profile__edit-form-title {
         padding-top: 25px;
         padding-left: 22px;
         }
