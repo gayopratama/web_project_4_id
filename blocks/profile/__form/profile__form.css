@@ -52,7 +52,7 @@
     border: none;
     }
   
-  .profile__edit-close-btn:hover, .profile__edit-close-btn:hover {
+  .profile__edit-submit-btn:hover, .profile__edit-close-btn:hover {
     opacity: .8;
   }
 
