@@ -1,14 +1,13 @@
-.profile__info_job {
+.profile__info-job {
     font-size: 18px;
     line-height: 21px;
 }
 
 @media screen and (max-width: 320px) {
-    .profile__info_bio {
+    .profile__info-job {
         font-size: 14px;
         line-height: 16px;
         width: 220px;
         text-align: center;
-        margin: 14px 0px 0px 0px;
     }
     }

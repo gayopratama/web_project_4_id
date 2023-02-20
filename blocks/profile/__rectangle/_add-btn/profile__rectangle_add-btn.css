@@ -1,4 +1,4 @@
-.profile__rectangle_add-btn {
+.profile__rectangle-add-btn {
     margin-top: 15px;
     margin-left: 65px;
  }
@@ -9,7 +9,7 @@
 
 
 @media screen and (max-width: 320px) {
-    .profile__rectangle_add-btn {
+    .profile__rectangle-add-btn {
         position: absolute;
         left: 60px;
     }
