@@ -6,3 +6,15 @@
     flex-wrap: wrap;
     gap: 15px;
 }
+
+@media screen and (max-width: 320px) {
+    .elements {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        width: 282px;
+        min-height: 2266px;
+        max-height: 3000px;
+        margin: 36px auto auto auto;
+    }
+    }

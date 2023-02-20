@@ -18,4 +18,5 @@
 @import url(./blocks/elements/element/__caption/element__caption.css);
 @import url(./blocks/elements/element/__like-btn/element__like-btn.css);
 @import url(./blocks/footer/footer.css);
-@import url(./blocks/media/__queri360/media__queri360.css);
+@import url(./blocks/form/add__form.css);
+@import url(./blocks/elements/element/__delete-btn/element__delete-btn.css);

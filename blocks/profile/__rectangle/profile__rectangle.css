@@ -11,3 +11,12 @@
 .profile__rectangle:hover {
     opacity: 0.6;
 }
+
+@media screen and (max-width: 320px) {
+    .profile__rectangle {
+        position: absolute;
+        top: 236px;
+        left: 0px;
+        width: 280px;
+    }
+    }

@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css">
   <link rel="script" href="script.js">
-  <title>Project 4</title>
+  <link rel="icon" type="image" href="/image/like-fill.svg">
+  <title>Around the U.S</title>
 </head>
 
 <body class="page">
@@ -15,7 +16,6 @@
     <img class="header__logo" src="./image/Vector.svg" alt="logo vector around US">
     <hr class="header__line">
   </header>
-
 
   <section class="profile">
     <div class="profile__avatar">
@@ -28,11 +28,11 @@
     <button class="profile__edit-btn">
       <img src="./image/EditButton.png" alt="edit button logo">
     </button>
-    <a href="#">
+    <button class="profile__add-btn">
       <div class="profile__rectangle">
         <img class="profile__rectangle_add-btn" src="./image/addsign.png" alt="Add Button logo">
       </div>
-    </a>
+    </button>
     <div class="edit__form">
       <form class="form">
         <h1 class="form__edit_profile">Edit profile</h1>
@@ -44,7 +44,6 @@
         <input class="form__input" type="text" value="Penjelajah" name="job">
         <hr class="form__line">
 
-        
         <button type="button" class="form__close_btn">
           <img src="./image/Close-Icon.png" alt="close icon">
         </button>
@@ -59,15 +58,14 @@
       <div class="element__caption_container">
       <p class="element__caption">Lembah Yosemite</p>
       <button class="element__like-btn"></button>
-
       </div>
     </div>
+
     <div class="element">
       <img class="element__foto" src="./image/kirill-pershin-1404681-unsplash.png" alt="view view danau Louise">
       <div class="element__caption_container">
         <p class="element__caption">Danau Louise</p>
         <button class="element__like-btn"></button>
-
       </div>
     </div>
     <div class="element">
@@ -75,7 +73,6 @@
       <div class="element__caption_container">
       <p class="element__caption">Pegunungan Bald</p>
       <button class="element__like-btn"></button>
-  
     </div>
     </div>
     <div class="element">
@@ -83,7 +80,6 @@
       <div class="element__caption_container">
       <p class="element__caption">Gunung Latemar</p>
       <button class="element__like-btn"></button>
-
     </div>
     </div>
     <div class="element">
@@ -91,7 +87,6 @@
       <div class="element__caption_container">
       <p class="element__caption">Vanoise National Park</p>
       <button class="element__like-btn"></button>
-
     </div>
     </div>
     <div class="element">
@@ -101,7 +96,25 @@
       <button class="element__like-btn"></button>
     </div>
     </div>
+  
   </section>
+
+  <div class="add__form">
+    <h2 class="add__form_title">Tempat Baru</h2>
+    <div class="field__titile">
+      <input class="form__input" type="text" placeholder="judul" name="title">
+      <hr class="form__line">
+    </div>
+    <div class="field__link">
+      <input class="form__input" type="text" placeholder="tautan gambar" name="link">
+      <hr class="form__line">
+    </div>
+    <button class="add__form_submit-btn">Buat</button>
+    <button type="button" class="add__form_close-btn">
+      <img src="./image/Close-Icon.png" alt="close icon">
+    </button>
+  </div>
+  
 
   <footer class="footer">
     © 2021 Around The U.S.

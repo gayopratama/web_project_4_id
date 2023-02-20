@@ -5,3 +5,14 @@
     line-height: 22px;
     color: #545454;
 }
+
+@media screen  and (max-width: 320px) {
+   .footer {
+    width: 282px;
+    height: 14px;
+    top: 2764px;
+    margin-left: 19px;
+    margin-top: 50px;
+   } 
+}
+

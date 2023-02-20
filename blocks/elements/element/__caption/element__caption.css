@@ -8,3 +8,10 @@
     white-space: nowrap;
     overflow: hidden;
 }
+
+.element__caption_container {
+    display: flex;
+    justify-content: space-between;
+    width: 270px;
+    border: none;
+}

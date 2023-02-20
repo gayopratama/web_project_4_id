@@ -2,3 +2,15 @@
     margin-top: 15px;
     margin-left: 65px;
  }
+
+ .profile__add-btn {
+    all: unset;    
+}
+
+
+@media screen and (max-width: 320px) {
+    .profile__rectangle_add-btn {
+        position: absolute;
+        left: 60px;
+    }
+    }
