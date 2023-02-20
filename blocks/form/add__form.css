@@ -1,4 +1,4 @@
-.add__form{
+.profile__add-form {
     width: 430px;
     height: 330px;
     background-color: #FFFFFF;
@@ -9,9 +9,11 @@
     top: 195px;
     left: 425px;
     display: none;
+    z-index: 9;
+
 }
 
-.add__form_title {
+.profile__add-form-title {
     width: 330px;
     height: 23px;
     font-weight: 900;
@@ -22,7 +24,24 @@
     margin: 0;
 }
 
-.add__form_submit-btn {
+.profile__add-form-input {
+    width: 90%;
+    margin: 20px 0 36px 34px;
+    border: none;
+    margin-bottom: 0px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+  }
+  
+.profile__add-form-input:focus {
+    outline: none;
+  }
+
+.profile__add-form-submit-btn {
     all: unset;
     width: 358px;
     height: 50.15px;
@@ -40,7 +59,7 @@
     cursor: pointer;
 }
 
-.add__form_close-btn{
+.profile__add-form-close-btn {
     all: unset;
     position: absolute;
     bottom: 340px;
@@ -50,26 +69,26 @@
     border: none;
 }
 
-.add__form_submit-btn:hover, .add__form_close-btn:hover {
+.profile__add-form-submit-btn:hover, .profile__add-form-close-btn:hover {
     opacity: .8;
   }
 
   @media screen and (max-width: 320px) { 
-    .add__form { 
+    .profile__add-form { 
         position: absolute;
         top: 140px;
         left: 20px;
         width: 282px;
     }
 
-    .add__form_close-btn {
+    .profile__add-form-close-btn {
         position: absolute;
         bottom: 340px;
         left: 230px;
         width: 26px; 
     }
 
-    .add__form_submit-btn {
+    .profile__add-form-submit-btn {
         width: 238px;
         margin-left: 22px;
         margin-top: 46px;

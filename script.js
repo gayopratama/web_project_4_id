@@ -3,8 +3,8 @@ const closeBtn = document.querySelector(".profile__edit-close-btn")
 const saveBtn = document.querySelector(".profile__edit-submit-btn")
 let likeBtns = document.querySelectorAll(".element__like-btn")
 const addBtn = document.querySelector(".profile__rectangle")
-const cardCloseBtn = document.querySelector(".add__form_close-btn")
-const submitCardBtn = document.querySelector(".add__form_submit-btn")
+const cardCloseBtn = document.querySelector(".profile__add-form-close-btn")
+const submitCardBtn = document.querySelector(".profile__add-form-submit-btn")
 
 openBtn.addEventListener("click", openForm);
 closeBtn.addEventListener("click", closeForm);
@@ -15,11 +15,11 @@ submitCardBtn.addEventListener("click", pushCard);
 
 
 function addCard() {
-  document.querySelector(".add__form").style.display = "block";
+  document.querySelector(".profile__add-form").style.display = "block" ;
 }
 
 function cardCloseForm() {
-  document.querySelector(".add__form").style.display = "none";
+  document.querySelector(".profile__add-form").style.display = "none";
 }
 
 
@@ -82,8 +82,8 @@ function cardItems(link, name, index) {
   return `
   <div class="element">
       <img class="element__foto" src="${link}">
-      <div class="element__caption_container">
-      <p class="element__caption">${name}</p>
+      <div class="element__container">
+      <p class="element__container-caption">${name}</p>
       <button class="element__like-btn"></button>
       <button class="element__delete-btn" onclick="deleteCard(${index})"></button>
       </div>
