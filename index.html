@@ -29,7 +29,7 @@
       <img src="./image/EditButton.png" alt="edit button logo">
     </button>
     <button class="profile__add-btn">
-      <div class="profile__rectangle">
+      <div class="rectangle">
         <img class="profile__rectangle-add-btn" src="./image/addsign.png" alt="Add Button logo">
       </div>
     </button>
@@ -45,23 +45,7 @@
           <img src="./image/Close-Icon.png" alt="close icon">
         </button>
       <button type="submit" class="profile__edit-submit-btn">Simpan</button>
-    </div>
-    
-    <div class="profile__add-form">
-      <h2 class="profile__add-form-title">Tempat Baru</h2>
-      <div class="profile__add-form-field">
-        <input class="profile__add-form-input" type="text" placeholder="judul" name="title">
-        <hr class="profile__add-form-line">
-      </div>
-      <div class="profile__add-form-field">
-        <input class="profile__add-form-input" type="text" placeholder="tautan gambar" name="link">
-        <hr class="profile__add-form-line">
-      </div>
-      <button class="profile__add-form-submit-btn">Buat</button>
-      <button type="button" class="profile__add-form-close-btn">
-        <img src="./image/Close-Icon.png" alt="close icon">
-      </button>
-    </div>
+    </div> 
   </section>
 
   <section class="elements">
@@ -108,9 +92,33 @@
       <button class="element__like-btn"></button>
     </div>
     </div>
-
     </section>
 
+
+    <section class="popup">
+      <div class="popup__overlay"></div>
+      <div class="popup__content">
+      <button class="popup__close-icon"><img src="./image/Close-Icon.png" alt=""></button>
+      <img class="popup__image" src="https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_yosemite.jpg" alt="">
+      <p class="popup__title">Lembah yosemite</p>
+    </div>
+    </section>
+
+    <div class="add__form">
+      <h2 class="add__form-title">Tempat Baru</h2>
+      <div class="add__form-field">
+        <input class="add__form-input" type="text" placeholder="judul" name="title">
+        <hr class="add__form-line">
+      </div>
+      <div class="add__form-field">
+        <input class="add__form-input" type="text" placeholder="tautan gambar" name="link">
+        <hr class="add__form-line">
+      </div>
+      <button class="add__form-submit-btn">Buat</button>
+      <button type="button" class="add__form-close-btn">
+        <img src="./image/Close-Icon.png" alt="close icon">
+      </button>
+    </div>
   
   
   <footer class="footer">

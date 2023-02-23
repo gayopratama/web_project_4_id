@@ -56,7 +56,7 @@
     opacity: .8;
   }
 
-  .profile__add-form-line {
+  .profile__edit-form-line {
     width: 358px;
     height: 0px;
     left: 461px;
@@ -83,7 +83,7 @@
         height: 322px;
       }
 
-      .form__submit_btn {
+      .profile__edit-submit-btn {
         width: 238px;
         margin-left: 22px;
         margin-top: 46px;
@@ -110,4 +110,11 @@
     .profile__edit-form-input {
         width: 80%;   
         }
+
+    .profile__edit-close-btn {
+        position: absolute;
+        bottom: 340px;
+        left: 230px;
+        width: 26px; 
+      }
 }

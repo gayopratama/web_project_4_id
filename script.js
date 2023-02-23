@@ -1,51 +1,51 @@
-const openBtn = document.querySelector(".profile__edit-btn");
-const closeBtn = document.querySelector(".profile__edit-close-btn")
-const saveBtn = document.querySelector(".profile__edit-submit-btn")
+const openEditFormBtn = document.querySelector(".profile__edit-btn");
+const closeEditFormBtn = document.querySelector(".profile__edit-close-btn")
+const SubmitEditFormBtn = document.querySelector(".profile__edit-submit-btn")
 let likeBtns = document.querySelectorAll(".element__like-btn")
-const addBtn = document.querySelector(".profile__rectangle")
-const cardCloseBtn = document.querySelector(".profile__add-form-close-btn")
-const submitCardBtn = document.querySelector(".profile__add-form-submit-btn")
+const addCardBtn = document.querySelector(".rectangle")
+const cardCloseBtn = document.querySelector(".add__form-close-btn")
+const submitCardBtn = document.querySelector(".add__form-submit-btn")
 
-openBtn.addEventListener("click", openForm);
-closeBtn.addEventListener("click", closeForm);
-saveBtn.addEventListener("click", saveForm);
-addBtn.addEventListener("click", addCard);
-cardCloseBtn.addEventListener("click", cardCloseForm);
-submitCardBtn.addEventListener("click", pushCard);
+openEditFormBtn.addEventListener("click", openEditForm);
+closeEditFormBtn.addEventListener("click", closeEditForm);
+SubmitEditFormBtn.addEventListener("click", submitEditForm);
+addCardBtn.addEventListener("click", addCardForm);
+cardCloseBtn.addEventListener("click", closeCardForm);
+submitCardBtn.addEventListener("click", addNewCard);
 
 
-function addCard() {
-  document.querySelector(".profile__add-form").style.display = "block" ;
+function addCardForm() {
+  document.querySelector(".add__form").style.display = "block" ;
 }
 
-function cardCloseForm() {
-  document.querySelector(".profile__add-form").style.display = "none";
+function closeCardForm() {
+  document.querySelector(".add__form").style.display = "none";
 }
 
 
-function openForm() {
+function openEditForm() {
   document.querySelector(".profile__edit-form").style.display = "block";
 }
 
-function closeForm() {
+function closeEditForm() {
   document.querySelector(".profile__edit-form").style.display = "none";
 }
 
 
-function saveForm() {
+function submitEditForm() {
   let name = document.querySelector('input[name="name"]').value;
   let job = document.querySelector('input[name="job"]').value;
   let displayName = document.querySelector('.profile__info-name');
   let displayJob = document.querySelector('.profile__info-job');
   displayName.innerHTML = name;
   displayJob.innerHTML = job;
-  closeForm();
+  closeEditForm();
 }
 
  
 document.querySelector('input[name="job"]').addEventListener("keyup", function(e) {
   if (e.key == 'Enter' || e.keyCode === 13) {
-    saveForm();
+    submitEditForm();
   }
 });
 
@@ -81,7 +81,7 @@ let initialCards = [
 function cardItems(link, name, index) {
   return `
   <div class="element">
-      <img class="element__foto" src="${link}">
+      <img class="element__foto" src="${link}" onclick="popUpImage(${index})">
       <div class="element__container">
       <p class="element__container-caption">${name}</p>
       <button class="element__like-btn"></button>
@@ -103,7 +103,7 @@ initiateCard();
 reQueryElement();
 
 
-function pushCard() {
+function addNewCard() {
 
   const nameAndLink = { name: document.querySelector('input[name="title"]').value, 
   link : document.querySelector('input[name="link"]').value
@@ -112,11 +112,9 @@ function pushCard() {
 
   initialCards.push(nameAndLink)
 
-  console.log(initialCards)
-
   initiateCard();
   reQueryElement();
-  cardCloseForm();
+  closeCardForm();
 }
 
 function reQueryElement() {
@@ -132,13 +130,22 @@ item.addEventListener("click",function(e) {
 }
 
 function deleteCard(index) {
-console.log(index)
 
 initialCards.splice(index, 1)
 
 initiateCard();
-console.log(initialCards)
 }
+
+function popUpImage(index) {
+  let link = initialCards[index].link
+  let name = initialCards[index].name
+  
+  document.querySelector(".popup__image").src= link
+  document.querySelector(".popup__title").src= name
+
+  document.querySelector(".popup").style.display= "block"
+}
+
 
 
 
