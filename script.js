@@ -3,8 +3,8 @@ const closeEditFormBtn = document.querySelector(".profile__edit-close-btn")
 const SubmitEditFormBtn = document.querySelector(".profile__edit-submit-btn")
 let likeBtns = document.querySelectorAll(".element__like-btn")
 const addCardBtn = document.querySelector(".rectangle")
-const cardCloseBtn = document.querySelector(".add__form-close-btn")
-const submitCardBtn = document.querySelector(".add__form-submit-btn")
+const cardCloseBtn = document.querySelector(".form__close-btn")
+const submitCardBtn = document.querySelector(".form__submit-btn")
 const closePopupBtn = document.querySelector(".popup__close-icon")
 
 openEditFormBtn.addEventListener("click", openEditForm);
@@ -18,11 +18,11 @@ closePopupBtn.addEventListener("click", closePopupImage);
 
 
 function addCardForm() {
-  document.querySelector(".add__form").style.display = "block" ;
+  document.querySelector(".form").style.display = "block" ;
 }
 
 function closeCardForm() {
-  document.querySelector(".add__form").style.display = "none";
+  document.querySelector(".form").style.display = "none";
 }
 
 
