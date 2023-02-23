@@ -5,6 +5,7 @@ let likeBtns = document.querySelectorAll(".element__like-btn")
 const addCardBtn = document.querySelector(".rectangle")
 const cardCloseBtn = document.querySelector(".add__form-close-btn")
 const submitCardBtn = document.querySelector(".add__form-submit-btn")
+const closePopupBtn = document.querySelector(".popup__close-icon")
 
 openEditFormBtn.addEventListener("click", openEditForm);
 closeEditFormBtn.addEventListener("click", closeEditForm);
@@ -12,6 +13,8 @@ SubmitEditFormBtn.addEventListener("click", submitEditForm);
 addCardBtn.addEventListener("click", addCardForm);
 cardCloseBtn.addEventListener("click", closeCardForm);
 submitCardBtn.addEventListener("click", addNewCard);
+closePopupBtn.addEventListener("click", closePopupImage);
+
 
 
 function addCardForm() {
@@ -141,9 +144,16 @@ function popUpImage(index) {
   let name = initialCards[index].name
   
   document.querySelector(".popup__image").src= link
-  document.querySelector(".popup__title").src= name
+  document.querySelector(".popup__title").textContent= name
 
   document.querySelector(".popup").style.display= "block"
+
+}
+
+function closePopupImage () {
+  document.querySelector(".popup").style.display= "none"
+
+
 }
 
 

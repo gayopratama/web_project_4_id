@@ -2,8 +2,8 @@
     position: fixed;
     width: 1280px;
     height: 1217px;
-    left: 0px;
     top: 0px;
+    margin: auto;
     display: none;
 }
 
@@ -38,7 +38,13 @@
     height: 40px;
     left: 100%;
     bottom: 100%;
+    cursor: pointer;
 }
+
+.popup__close-icon:hover {
+    opacity: .5;
+}
+
 
 .popup__title {
     position: absolute;
