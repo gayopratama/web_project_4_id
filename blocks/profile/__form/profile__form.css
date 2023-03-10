@@ -28,9 +28,6 @@
     outline: none;
   }
 
-  .profile__edit-form-line {
-    margin-bottom: 0;
-  }
 
   .profile__edit-form-input-eror {
     font-family: 'Inter';
@@ -85,6 +82,7 @@
   }
 
   .profile__edit-form-line {
+    margin-bottom: 0;
     width: 358px;
     height: 0px;
     left: 461px;
