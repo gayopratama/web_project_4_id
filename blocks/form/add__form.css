@@ -98,6 +98,16 @@
     margin-bottom: 0;
   }
 
+  .form__input-eror {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FF0000;
+    margin-left: 36px;
+  }
+
 .form__submit-btn:hover, .form__close-btn:hover {
     opacity: .8;
   }
