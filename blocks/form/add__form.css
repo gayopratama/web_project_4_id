@@ -59,6 +59,25 @@
     cursor: pointer;
 }
 
+.form__submit-btn-disabled {
+    all: unset;
+    width: 358px;
+    height: 50.15px;
+    background: #000000;
+    border-radius: 2px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: 36px;
+    margin-top: 36px;
+    cursor: pointer;
+    opacity: 0.2;
+}
+
 .form__close-btn {
     all: unset;
     position: absolute;
@@ -76,6 +95,7 @@
     top: 390.34px;
     opacity: 0.2;
     border: 1px solid #000000;
+    margin-bottom: 0;
   }
 
 .form__submit-btn:hover, .form__close-btn:hover {

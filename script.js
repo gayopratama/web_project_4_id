@@ -1,3 +1,4 @@
+//Get DOM Element
 const openEditFormBtn = document.querySelector(".profile__edit-btn");
 const closeEditFormBtn = document.querySelector(".profile__edit-close-btn")
 const SubmitEditFormBtn = document.querySelector(".profile__edit-submit-btn")
@@ -6,32 +7,71 @@ const addCardBtn = document.querySelector(".rectangle")
 const cardCloseBtn = document.querySelector(".form__close-btn")
 const submitCardBtn = document.querySelector(".form__submit-btn")
 const closePopupBtn = document.querySelector(".popup__close-icon")
+const addForm = document.querySelector(".form")
+const editForm = document.querySelector(".profile__edit-form")
+const nameInput = document.querySelector('input[name="name"]');
+const jobInput = document.querySelector('input[name="job"]');
+const nameError = document.querySelector('.name-input-error');
+const jobError = document.querySelector('.job-input-error');
+const submitBtn = document.querySelector('#form__submit-btn');
+const popupOverlay = document.querySelector(".popup__overlay");
+const form = document.querySelector(".form");
+const titleInput = document.querySelector("[name='title']");
+const linkInput = document.querySelector("[name='link']");
+const popup = document.querySelector(".popup")
 
+//addEventListener
+popupOverlay.addEventListener("click", closePopupImage)
 openEditFormBtn.addEventListener("click", openEditForm);
 closeEditFormBtn.addEventListener("click", closeEditForm);
-SubmitEditFormBtn.addEventListener("click", submitEditForm);
 addCardBtn.addEventListener("click", addCardForm);
 cardCloseBtn.addEventListener("click", closeCardForm);
-submitCardBtn.addEventListener("click", addNewCard);
 closePopupBtn.addEventListener("click", closePopupImage);
+SubmitEditFormBtn.addEventListener("click", submitEditForm);
+submitCardBtn.addEventListener("click", function (evt) {
+  addNewCard();
+  evt.preventDefault()
+});
+editForm.addEventListener("keyup", function(e) {
+  if (e.key == 'Enter' || e.keyCode === 13) {
+    submitEditForm();
+  }
+  if (e.key == 'Escape' || e.keyCode === 27) {
+    closeEditForm()
+  }
+});
+
+form.addEventListener("keyup", function(e) {
+  if (e.key == 'Enter' || e.keyCode === 13) {
+    addCardForm();
+  }
+  if (e.key == 'Escape' || e.keyCode === 27) {
+    closeCardForm()
+  }
+});
+popup.addEventListener("keyup", function(e) {
+  if (e.key == 'Escape' || e.keyCode === 27) {
+    closePopupImage()
+  }
+});
 
 
 
 function addCardForm() {
-  document.querySelector(".form").style.display = "block" ;
+  addForm.style.display = "block" ;
 }
 
 function closeCardForm() {
-  document.querySelector(".form").style.display = "none";
+  addForm.style.display = "none";
 }
 
 
 function openEditForm() {
-  document.querySelector(".profile__edit-form").style.display = "block";
+  editForm.style.display = "block";
 }
 
 function closeEditForm() {
-  document.querySelector(".profile__edit-form").style.display = "none";
+  editForm.style.display = "none";
 }
 
 
@@ -45,12 +85,6 @@ function submitEditForm() {
   closeEditForm();
 }
 
- 
-document.querySelector('input[name="job"]').addEventListener("keyup", function(e) {
-  if (e.key == 'Enter' || e.keyCode === 13) {
-    submitEditForm();
-  }
-});
 
 
 let initialCards = [
@@ -152,9 +186,53 @@ function popUpImage(index) {
 
 function closePopupImage () {
   document.querySelector(".popup").style.display= "none"
-
-
 }
+
+
+ //project 6
+// Define functions to enable/disable submit button and update error messages
+function setSubmitButtonState(isValid) {
+  SubmitEditFormBtn.disabled = !isValid;
+  SubmitEditFormBtn.classList.toggle("profile__edit-submit-btn-disabled", !isValid);
+}
+
+function setErrorDisplay(inputField, errorField) {
+  if (inputField.value.trim() === "") {
+    errorField.style.display = "block";
+    return false;
+  } else {
+    errorField.style.display = "none";
+    return true;
+  }
+}
+
+// Add event listeners to update submit button state and error messages
+editForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  nameInput.value = "";
+  jobInput.value = "";
+  setSubmitButtonState(false);
+});
+
+editForm.addEventListener("input", (event) => {
+  const isNameValid = setErrorDisplay(nameInput, nameError);
+  const isJobValid = setErrorDisplay(jobInput, jobError);
+  setSubmitButtonState(isNameValid && isJobValid);
+});
+
+// Validate input fields and enable/disable submit button in the card form
+const titleError = form.querySelector(".title-input-error");
+const linkError = form.querySelector(".link-input-error");
+
+form.addEventListener("input", (event) => {
+  const isTitleValid = setErrorDisplay(titleInput, titleError);
+  const isLinkValid = setErrorDisplay(linkInput, linkError);
+  submitCardBtn.disabled = !(isTitleValid && isLinkValid);
+  submitCardBtn.classList.toggle("form__submit-btn-disabled", !(isTitleValid && isLinkValid));
+});
+
+
+
 
 
 

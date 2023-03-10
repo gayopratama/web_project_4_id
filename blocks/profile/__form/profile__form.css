@@ -27,6 +27,20 @@
 .profile__edit-form-input:focus {
     outline: none;
   }
+
+  .profile__edit-form-line {
+    margin-bottom: 0;
+  }
+
+  .profile__edit-form-input-eror {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FF0000;
+    margin-left: 36px;
+  }
   
 .profile__edit-submit-btn { 
     background-color: #000000;
@@ -37,9 +51,24 @@
     width: 358px;
     opacity: 1;
     position: absolute;
-    bottom: 40px;
+    bottom: 30px;
+    left: 0;
+    margin-left: 36px;
+  }
+
+  .profile__edit-submit-btn-disabled {
+    background-color: #000000;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 358px;
+    opacity: 1;
+    position: absolute;
+    bottom: 30px;
     left: 30;
     margin-left: 36px;
+    opacity: 0.2;
   }
   
   .profile__edit-close-btn {
