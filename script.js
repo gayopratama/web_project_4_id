@@ -13,7 +13,6 @@ const nameInput = document.querySelector('input[name="name"]');
 const jobInput = document.querySelector('input[name="job"]');
 const nameError = document.querySelector('.name-input-error');
 const jobError = document.querySelector('.job-input-error');
-const submitBtn = document.querySelector('#form__submit-btn');
 const popupOverlay = document.querySelector(".popup__overlay");
 const form = document.querySelector(".form");
 const titleInput = document.querySelector("[name='title']");
