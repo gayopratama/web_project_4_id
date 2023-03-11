@@ -14,10 +14,11 @@ Ini adalah project membuat halaman media sosial yang menampilkan profile, bebera
 6. Figma based design
 7. Query Selector DOM.
 8. Event Listener.
+9. Form Validation.
 
 
 **Github**
 
-* [Tautan ke proyek di Github](https://github.com/gayopratama/web_project_4_id)
+* [Tautan ke proyek di Github](https://gayopratama.github.io/web_project_4_id/)
 
 
