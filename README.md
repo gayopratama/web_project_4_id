@@ -19,6 +19,6 @@ Ini adalah project membuat halaman media sosial yang menampilkan profile, bebera
 
 **Github**
 
-* [Tautan ke proyek di Github](https://gayopratama.github.io/web_project_4_id/)
+* [Tautan Github Pages](https://gayopratama.github.io/web_project_4_id/)
 
 
