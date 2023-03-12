@@ -3,7 +3,7 @@
     width: 21px;
     height: 19px;
     margin-top: 30px;
-    background-image: url("../../../../image/gilike-btn.svg");
+    background-image: url(/image/like-button.png);
     border: none;
     cursor: pointer;
 }
@@ -13,5 +13,5 @@
 }
 
 .element__like-btn_active {
-    background-image: url("../../../../image/like-fill.svg");
+    background-image: url("/image/like-button-fill.png");
 }
