@@ -134,9 +134,7 @@ function cardItems(link, name, index) {
       <img class="element__foto" src="${link}" onclick="popUpImage(${index})">
       <div class="element__container">
       <p class="element__container-caption">${name}</p>
-      <button class="element__like-btn">
-      <img src="./image/like-button.png" alt="">
-      </button>
+      <button class="element__like-btn"></button>
       <button class="element__delete-btn" onclick="deleteCard(${index})"></button>
       </div>
       </div>

@@ -3,7 +3,7 @@
     width: 21px;
     height: 19px;
     margin-top: 30px;
-    background-image: url(/image/like-button.png);
+    background-image: url("../../../../image/like.svg");
     border: none;
     cursor: pointer;
 }
@@ -13,6 +13,5 @@
 }
 
 .element__like-btn_active {
-    background: url(/image/like-button-fill.png);
+    background: url("../../../../image/fill.svg");
 }
-/*git add . && git commit -m "bugfix/like-btn" */
