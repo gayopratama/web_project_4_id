@@ -16,10 +16,13 @@ const popupOverlay = document.querySelector(".popup__overlay");
 const form = document.querySelector(".form");
 const titleInput = document.querySelector("[name='title']");
 const linkInput = document.querySelector("[name='link']");
-const popup = document.querySelector(".popup")
+const popup = document.querySelector(".popup");
+const overlay = document.querySelector(".overlay");
+const page = document.querySelector(".page")
 
 //addEventListener
-popupOverlay.addEventListener("click", closePopupImage)
+popupOverlay.addEventListener("click", closePopupImage);
+overlay.addEventListener("click", closeAllPopup);
 openEditFormBtn.addEventListener("click", openEditForm);
 closeEditFormBtn.addEventListener("click", closeEditForm);
 addCardBtn.addEventListener("click", addCardForm);
@@ -31,49 +34,52 @@ submitCardBtn.addEventListener("click", function (evt) {
   evt.preventDefault()
 });
 editForm.addEventListener("keyup", function(e) {;
-  if (e.key == 'Enter' || e.keyCode === 13) {
+  if (e.key == 'Enter') {
     submitEditForm();
   }
-  if (e.key == 'Escape' || e.keyCode === 27) {
-    closeEditForm()
-  }
 });
-
 form.addEventListener("keyup", function(e) {
-  if (e.key == 'Enter' || e.keyCode === 13) {
+  if (e.key == 'Enter') {
     addCardForm();
   }
-  if (e.key == 'Escape' || e.keyCode === 27) {
-    closeCardForm()
-  }
 });
-popup.addEventListener("keyup", function(e) {
-  if (e.key == 'Escape' || e.keyCode === 27) {
-    closePopupImage()
+page.addEventListener("keyup", function(evt){
+  if (evt.key === 'Escape') {
+    closeAllPopup()
   }
-});
+})
 
 
-form.addEventListener("mouseleave", closeCardForm)
-editForm.addEventListener("mouseleave", closeEditForm)
-
-
+//function
+function closeAllPopup() {
+  addForm.style.display = "none";
+  editForm.style.display = "none";
+  popup.style.display= "none";
+  overlay.style.display = "none";
+}
 
 function addCardForm() {
-  addForm.style.display = "block" ;
+  addForm.style.display = "block";
+  overlay.style.display = "block";
+
 }
 
 function closeCardForm() {
   addForm.style.display = "none";
+  overlay.style.display = "none";
+
 }
 
 
 function openEditForm() {
   editForm.style.display = "block";
+  overlay.style.display = "block";
+
 }
 
 function closeEditForm() {
   editForm.style.display = "none";
+  overlay.style.display = "none";
 }
 
 function submitEditForm() {
