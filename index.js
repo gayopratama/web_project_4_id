@@ -33,6 +33,8 @@ submitCardBtn.addEventListener("click", function (evt) {
   addNewCard();
   evt.preventDefault()
 });
+
+
 editForm.addEventListener("keyup", function(e) {;
   if (e.key == 'Enter') {
     submitEditForm();
@@ -59,27 +61,27 @@ function closeAllPopup() {
 }
 
 function addCardForm() {
-  addForm.style.display = "block";
-  overlay.style.display = "block";
+  addForm.classList.toggle("form-active")
+  overlay.classList.toggle("overlay-active")
 
 }
 
 function closeCardForm() {
-  addForm.style.display = "none";
-  overlay.style.display = "none";
+  addForm.classList.toggle("form-active")
+  overlay.classList.toggle("overlay-active")
 
 }
 
 
 function openEditForm() {
-  editForm.style.display = "block";
-  overlay.style.display = "block";
+  editForm.classList.toggle("form-active")
+  overlay.classList.toggle("overlay-active")
 
 }
 
 function closeEditForm() {
-  editForm.style.display = "none";
-  overlay.style.display = "none";
+  editForm.classList.toggle("form-active")
+  overlay.classList.toggle("overlay-active")
 }
 
 function submitEditForm() {

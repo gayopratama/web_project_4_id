@@ -1,4 +1,3 @@
-// Define functions to enable/disable submit button and update error messages
 function setSubmitButtonState(isValid) {
     SubmitEditFormBtn.disabled = !isValid;
     SubmitEditFormBtn.classList.toggle("profile__edit-submit-btn-disabled", !isValid);

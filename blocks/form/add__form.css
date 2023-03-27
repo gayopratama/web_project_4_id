@@ -8,9 +8,13 @@
     position: absolute;
     top: 195px;
     left: 425px;
-    display: none;
+    visibility: hidden;
     z-index: 9;
 
+}
+
+.form-active{
+  visibility: visible;
 }
 
 .form__title {
@@ -108,7 +112,11 @@
     left: 0;
     cursor: pointer;
     z-index: 8;
-    display: none;
+    visibility: hidden;
+}
+
+.overlay-active{
+  visibility: visible;
 }
 
   .form__input-eror {
@@ -123,6 +131,10 @@
 
 .form__submit-btn:hover, .form__close-btn:hover {
     opacity: .8;
+  }
+
+  .form-oppened {
+    display: block;
   }
 
   @media screen and (max-width: 320px) { 
