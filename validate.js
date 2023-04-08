@@ -1,3 +1,8 @@
+const nameError = document.querySelector('.name-input-error');
+const jobError = document.querySelector('.job-input-error');
+
+
+
 function setSubmitButtonState(isValid) {
     SubmitEditFormBtn.disabled = !isValid;
     SubmitEditFormBtn.classList.toggle("profile__edit-submit-btn-disabled", !isValid);
@@ -18,6 +23,7 @@ function setSubmitButtonState(isValid) {
     event.preventDefault();
     nameInput.value = "";
     jobInput.value = "";
+    console.log(event)
     setSubmitButtonState(false);
   });
   
@@ -37,3 +43,18 @@ function setSubmitButtonState(isValid) {
     submitCardBtn.disabled = !(isTitleValid && isLinkValid);
     submitCardBtn.classList.toggle("form__submit-btn-disabled", !(isTitleValid && isLinkValid));
   });
+
+
+  function enableValidation () {
+    const formList = Array.from(document.querySelectorAll(".form"));
+    
+    formList.forEach((formElement) => {
+      formElement.addEventListener("submit", (evt)=> {
+        evt.preventDefault();
+      });
+    });
+  }
+  
+
+  enableValidation();
+  

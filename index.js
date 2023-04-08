@@ -10,8 +10,6 @@ const addForm = document.querySelector(".form")
 const editForm = document.querySelector(".profile__edit-form")
 const nameInput = document.querySelector('input[name="name"]');
 const jobInput = document.querySelector('input[name="job"]');
-const nameError = document.querySelector('.name-input-error');
-const jobError = document.querySelector('.job-input-error');
 const popupOverlay = document.querySelector(".popup__overlay");
 const form = document.querySelector(".form");
 const titleInput = document.querySelector("[name='title']");
@@ -35,35 +33,35 @@ submitCardBtn.addEventListener("click", function (evt) {
 });
 
 
-editForm.addEventListener("keyup", function(e) {;
-  if (e.key == 'Enter') {
-    submitEditForm();
-  }
-});
-form.addEventListener("keyup", function(e) {
-  if (e.key == 'Enter') {
-    addCardForm();
-  }
-});
-page.addEventListener("keyup", function(evt){
-  if (evt.key === 'Escape') {
-    closeAllPopup()
-  }
-})
+
 
 
 //function
 function closeAllPopup() {
-  addForm.style.display = "none";
-  editForm.style.display = "none";
-  popup.style.display= "none";
-  overlay.style.display = "none";
+  addForm.classList.toggle("form-active")
+  addForm.classList.toggle("form-active")
+  closePopupImage()  
+  overlay.classList.toggle("overlay-active")
 }
 
 function addCardForm() {
   addForm.classList.toggle("form-active")
   overlay.classList.toggle("overlay-active")
-
+  editForm.addEventListener("keyup", function(e) {;
+    if (e.key == 'Enter') {
+      submitEditForm();
+    }
+  });
+  form.addEventListener("keyup", function(e) {
+    if (e.key == 'Enter') {
+      addCardForm();
+    }
+  });
+  page.addEventListener("keyup", function(evt){
+    if (evt.key === 'Escape') {
+      closeAllPopup()
+    }
+  })
 }
 
 function closeCardForm() {
@@ -76,7 +74,21 @@ function closeCardForm() {
 function openEditForm() {
   editForm.classList.toggle("form-active")
   overlay.classList.toggle("overlay-active")
-
+  editForm.addEventListener("keyup", function(e) {;
+    if (e.key == 'Enter') {
+      submitEditForm();
+    }
+  });
+  form.addEventListener("keyup", function(e) {
+    if (e.key == 'Enter') {
+      addCardForm();
+    }
+  });
+  page.addEventListener("keyup", function(evt){
+    if (evt.key === 'Escape') {
+      closeAllPopup()
+    }
+  })
 }
 
 function closeEditForm() {
@@ -104,7 +116,7 @@ function popUpImage(index) {
 
 }
 
-function closePopupImage () {
+function closePopupImage() {
   popup.style.display= "none"
 }
 
