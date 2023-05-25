@@ -53,48 +53,58 @@
     </form> 
   </section>
 
-  <section class="elements">
-    </section>
+  <section class="elements"></section>
+
+  <template id="element">
+    <div class="element">
+      <img class="element__photo" alt="view-images">
+      <div class="element__container">
+      <p class="element__caption"></p>
+      <button class="element__like"></button>
+      <button class="element__delete"></button>
+      </div>
+      </div>
+  </template> 
 
 
-    <section class="popup">
-      <div class="popup__overlay"></div>
-      <div class="popup__content">
-      <button class="popup__close-icon"><img src="./image/Close-Icon.png" alt=""></button>
-      <img class="popup__image" src="https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_yosemite.jpg" alt="">
-      <p class="popup__title">Lembah yosemite</p>
+  <section class="popup">
+    <div class="popup__overlay"></div>
+    <div class="popup__content">
+    <button class="popup__close-icon"><img src="./image/Close-Icon.png" alt=""></button>
+    <img class="popup__image" src="" alt="">
+    <p class="popup__title"></p>
+  </div>
+  </section>
+
+  <form class="form" novalidate>
+    <h2 class="form__title">Tempat Baru</h2>
+    <div class="form__field">
+      <input class="form__input"  type="text" placeholder="judul" name="title" minlength="2" maxlength="30" required>
+      <hr class="form__line">
+      <span class="form__input-eror title-input-error">silahkan isi kolom ini.</span>
+
     </div>
-    </section>
+    <div class="form__field">
+      <input type="url" class="form__input" placeholder="tautan gambar" name="link" required>
+      <hr class="form__line">
+      <span class="form__input-eror link-input-error">silahkan masukan link url.</span>
 
-    <form class="form" novalidate>
-      <h2 class="form__title">Tempat Baru</h2>
-      <div class="form__field">
-        <input class="form__input"  type="text" placeholder="judul" name="title" minlength="2" maxlength="30" required>
-        <hr class="form__line">
-        <span class="form__input-eror title-input-error">silahkan isi kolom ini.</span>
+    </div>
+    <button class="form__submit-btn" >Buat</button>
+    <button class="form__close-btn">
+      <img src="./image/Close-Icon.png" alt="close icon">
+    </button>
+  </form>
 
-      </div>
-      <div class="form__field">
-        <input type="url" class="form__input" placeholder="tautan gambar" name="link" required>
-        <hr class="form__line">
-        <span class="form__input-eror link-input-error">silahkan masukan link url.</span>
-
-      </div>
-      <button class="form__submit-btn" >Buat</button>
-      <button class="form__close-btn">
-        <img src="./image/Close-Icon.png" alt="close icon">
-      </button>
-    </form>
-
-    <div class="overlay"></div>
+  <div class="overlay"></div>
   
   
   <footer class="footer">
     © 2021 Around The U.S.
   </footer>
 
-  <script src="index.js"></script>
-  <script src="validate.js"></script>
+  <script type="module" src="index.js" ></script>
+  
 </body>
 
 </html>

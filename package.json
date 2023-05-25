@@ -1,0 +1,20 @@
+{
+  "name": "web_project_4_id",
+  "version": "1.0.0",
+  "description": "Ini adalah project membuat halaman media sosial yang menampilkan profile, beberapa feeds foto alam dan caption. halaman ini juga bisa menampilkan pop-up form apabila ed button di click. tugas ini dibuat guna menyelesaikan modul pembelajaran Sprint 4: JavaScript Dasar.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gayopratama/web_project_4_id.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gayopratama/web_project_4_id/issues"
+  },
+  "homepage": "https://github.com/gayopratama/web_project_4_id#readme"
+}
