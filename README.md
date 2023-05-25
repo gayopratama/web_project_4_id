@@ -1,4 +1,4 @@
-# Proyek 4: Di Sekitar Amerika Serikat
+# Proyek 7: Di Sekitar Amerika Serikat
 
 ### Tentang Project
 
