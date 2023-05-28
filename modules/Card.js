@@ -1,3 +1,5 @@
+import {PopUp} from "../modules/utils.js"
+
 export class Card {
   constructor(caption, photo) {
     this._caption = caption;
@@ -20,7 +22,7 @@ export class Card {
     this._element.querySelector(".element__photo").src = this._photo;
     this._element.querySelector(".element__caption").textContent = this._caption;
     this._setEventLisiteners()
-
+    new PopUp(this._photo, this._caption, this._element)
     return this._element;
   }
 
@@ -31,12 +33,12 @@ export class Card {
 
 
   _deleteCard(e) {
-    e.target.closest(".element").remove()
+    e.target.closest(".element").remove();
+    document.querySelector(".popup").style.display= "none";
   }
 
   _likeCard(e) {
     e.target.classList.toggle("element__like_active")
-
   }
 }
 
@@ -47,7 +49,7 @@ export class CardItems {
     this._renderCard()
   }
 
-  addCard(evt){
+  addCard(){
     this._cardlist.push({
       name : titleInput.value,
       link : linkInput.value
@@ -67,10 +69,9 @@ export class CardItems {
       cards.push(cardElement)
     
     })
+
     
     document.querySelector(".elements").innerHTML = '';
     document.querySelector(".elements").replaceChildren(...cards);
   }
-
 }
-

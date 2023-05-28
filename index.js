@@ -1,6 +1,7 @@
 import { Card, CardItems } from "./modules/Card.js";
 import { FormValidator } from "./modules/FormValidator.js";
-import { Popup, Overlay } from "./modules/utils.js";
+import {Overlay} from "../modules/utils.js"
+
 
 let initialCards = [
   {
@@ -47,13 +48,13 @@ class ProfileForm {
   }
 
   openEditForm() {
-    this.editForm.classList.toggle("form-active");
-    overlay.toggleOverlay();
+    this.editForm.classList.add("form-active");
+    document.querySelector(".overlay").classList.add("overlay-active");
   }
 
   closeEditForm() {
-    this.editForm.classList.toggle("form-active");
-    overlay.toggleOverlay();
+    this.editForm.classList.remove("form-active");
+    document.querySelector(".overlay").classList.remove("overlay-active");
   }
 
   submitEditForm() {
@@ -71,75 +72,38 @@ class ProfileForm {
   }
 }
 
-class CardForm {
-  constructor() {
-    this.addCardBtn = document.querySelector(".rectangle");
-    this.cardCloseBtn = document.querySelector(".form__close-btn");
-    this.submitCardBtn = document.querySelector(".form__submit-btn");
-    this.addForm = document.querySelector(".form");
+document.querySelector(".rectangle").addEventListener("click", function(){
+  document.querySelector(".form").classList.add("form-active");
+  document.querySelector(".overlay").classList.add("overlay-active");
+})
 
-    this.addCardBtn.addEventListener("click", this.openCardForm.bind(this));
-    this.cardCloseBtn.addEventListener("click", this.closeCardForm.bind(this));
-    this.submitCardBtn.addEventListener("click", this.addCard.bind(this));
-    this.addForm.addEventListener("keyup", this.handleFormKeyUp.bind(this));
-  }
-
-  openCardForm() {
-    this.addForm.classList.toggle("form-active");
-    overlay.toggleOverlay();
-  }
-
-  closeCardForm() {
-    this.addForm.classList.toggle("form-active");
-    overlay.toggleOverlay();
-  }
-
-  addCard(e) {
-    const titleInput = document.querySelector("[name='title']");
-    const linkInput = document.querySelector("[name='link']");
-    const title = titleInput.value;
-    const link = linkInput.value;
-
-    if (title && link) {
-      const newCard = new Card(title, link);
-      cardItems.addCard(newCard);
-      this.closeCardForm();
-    }
-    e.preventDefault()
-
-  }
-
-  handleFormKeyUp(e) {
-    if (e.key === 'Enter') {
-      this.addCard();
-    }
-  }
+function closeCardForm(){
+  document.querySelector(".form").classList.remove("form-active");  
+  document.querySelector(".overlay").classList.remove("overlay-active");
 }
+
+function closePopup() {
+  document.querySelector(".overlay").classList.toggle("overlay-active");
+}
+
+document.querySelector(".form__submit-btn").addEventListener("click", function(e) {
+    const name = document.querySelector("input[name='title']").value;
+    const link = document.querySelector("input[name='link']").value;
+
+    initialCards.push({ name, link });
+    const cardSum = new CardItems(initialCards);
+    cardSum._renderCard()
+    e.preventDefault()
+    closeCardForm()
+  })
+
 
 
 const cardItems = new CardItems(initialCards);
-const popup = new Popup();
 const profileForm = new ProfileForm();
-const cardForm = new CardForm();
 const overlay = new Overlay();
 
 const editForm = document.querySelector(".profile__edit-form");
 const addForm = document.querySelector(".form");
 const editFormValidator = new FormValidator(editForm);
 const cardFormValidator = new FormValidator(addForm);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

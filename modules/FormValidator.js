@@ -2,8 +2,8 @@ export class FormValidator {
   constructor(formElement) {
     this.formElement = formElement;
     this.inputFields = Array.from(formElement.querySelectorAll("input"));
-    this.errorFields = Array.from(formElement.querySelectorAll(".profile__edit-form-input-eror"));
-    this.submitButton = formElement.querySelector(".submit-btn");
+    this.errorFields = Array.from(formElement.querySelectorAll("#error__field"));
+    this.submitButton = formElement.querySelector("#form__submit-btn");
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInput = this.handleInput.bind(this);
@@ -14,6 +14,7 @@ export class FormValidator {
     });
 
     this.enableValidation();
+    
   }
 
   enableValidation() {
@@ -64,4 +65,3 @@ export class FormValidator {
     return this.errorFields.find((errorField) => errorField.dataset.error === fieldName);
   }
 }
-
