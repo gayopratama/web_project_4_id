@@ -3,7 +3,7 @@ export class FormValidator {
     this.formElement = formElement;
     this.inputFields = Array.from(formElement.querySelectorAll("input"));
     this.errorFields = Array.from(formElement.querySelectorAll(".input-error"));
-    this.submitButton = formElement.querySelector("#form__submit-btn");
+    this.submitButton = formElement.querySelector(".submit");
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInput = this.handleInput.bind(this);
@@ -14,7 +14,7 @@ export class FormValidator {
     });
 
     this.enableValidation();
-    
+    console.log(this.submitButton)
   }
 
   enableValidation() {
@@ -52,7 +52,7 @@ export class FormValidator {
 
   setSubmitButtonState(isValid) {
     this.submitButton.disabled = !isValid;
-    this.submitButton.classList.toggle("disabled", !isValid);
+    this.submitButton.classList.tog("disabled", !isValid);
   }
 
   clearForm() {
