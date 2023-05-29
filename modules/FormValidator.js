@@ -2,7 +2,7 @@ export class FormValidator {
   constructor(formElement) {
     this.formElement = formElement;
     this.inputFields = Array.from(formElement.querySelectorAll("input"));
-    this.errorFields = Array.from(formElement.querySelectorAll("#error__field"));
+    this.errorFields = Array.from(formElement.querySelectorAll(".input-error"));
     this.submitButton = formElement.querySelector("#form__submit-btn");
 
     this.handleSubmit = this.handleSubmit.bind(this);
