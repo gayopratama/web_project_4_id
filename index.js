@@ -1,7 +1,5 @@
 import { Card, CardItems } from "./modules/Card.js";
 import { FormValidator } from "./modules/FormValidator.js";
-import {Overlay} from "../modules/utils.js"
-
 
 let initialCards = [
   {
@@ -45,6 +43,7 @@ class ProfileForm {
     this.closeEditFormBtn.addEventListener("click", this.closeEditForm.bind(this));
     this.submitEditFormBtn.addEventListener("click", this.submitEditForm.bind(this));
     this.editForm.addEventListener("keyup", this.handleFormKeyUp.bind(this));
+    document.querySelector(".overlay").addEventListener("click", this.closeEditForm.bind(this));
   }
 
   openEditForm() {
@@ -77,14 +76,20 @@ document.querySelector(".rectangle").addEventListener("click", function(){
   document.querySelector(".overlay").classList.add("overlay-active");
 })
 
-function closeCardForm(){
+function closeCardForm() {
   document.querySelector(".form").classList.remove("form-active");  
   document.querySelector(".overlay").classList.remove("overlay-active");
 }
 
-function closePopup() {
-  document.querySelector(".overlay").classList.toggle("overlay-active");
-}
+document.querySelector(".overlay").addEventListener("click", closeCardForm); 
+document.querySelector(".form__close-btn").addEventListener("click", closeCardForm);
+document.querySelector(".page").addEventListener("keyup", function(evt){
+  if (evt.key === 'Escape') {
+    closeCardForm();
+    editForm.classList.remove("form-active");
+    document.querySelector(".popup").style.display= "none"
+  }
+})
 
 document.querySelector(".form__submit-btn").addEventListener("click", function(e) {
     const name = document.querySelector("input[name='title']").value;
@@ -97,13 +102,15 @@ document.querySelector(".form__submit-btn").addEventListener("click", function(e
     closeCardForm()
   })
 
-
-
 const cardItems = new CardItems(initialCards);
 const profileForm = new ProfileForm();
-const overlay = new Overlay();
 
 const editForm = document.querySelector(".profile__edit-form");
 const addForm = document.querySelector(".form");
-const editFormValidator = new FormValidator(editForm);
-const cardFormValidator = new FormValidator(addForm);
+const editFormValidator = new FormValidator(editForm, {
+  disabledButton:"profile__edit-submit-btn-disabled" 
+});
+
+const cardFormValidator = new FormValidator(addForm, {
+  disabledButton:"form__submit-btn-disabled" 
+});

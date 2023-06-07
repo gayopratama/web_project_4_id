@@ -1,6 +1,7 @@
 export class FormValidator {
-  constructor(formElement) {
+  constructor(formElement, selectors) {
     this.formElement = formElement;
+    this.selectors =selectors;
     this.inputFields = Array.from(formElement.querySelectorAll("input"));
     this.errorFields = Array.from(formElement.querySelectorAll(".input-error"));
     this.submitButton = formElement.querySelector(".submit");
@@ -13,8 +14,10 @@ export class FormValidator {
       inputField.addEventListener("input", this.handleInput);
     });
 
+    console.log(this.handleInput)
+    console.log(this.errorFields)
+
     this.enableValidation();
-    console.log(this.submitButton)
   }
 
   enableValidation() {
@@ -33,15 +36,27 @@ export class FormValidator {
     const inputField = event.target;
     const errorField = this.getErrorField(inputField);
     const isValid = this.setErrorDisplay(inputField, errorField);
+    console.log(errorField)
+
     this.setSubmitButtonState(this.isFormValid());
+    console.log(event)
   }
 
   setErrorDisplay(inputField, errorField) {
-    const isValid = inputField.value.trim() !== "";
+    let message = []
+    const isValid = inputField.value.length >2;
     if (!isValid) {
       errorField.style.display = "block";
-    } else {
+      message.push("kolom harus lebih dari 2 karakter")
+      errorField.innerHTML = message
+
+    } if (inputField.value.length >=40) {
+      errorField.style.display = "block";
+      message.push("kolom tidak boleh lebih dari karakter")
+    }
+    if (isValid) {
       errorField.style.display = "none";
+
     }
     return isValid;
   }
@@ -52,7 +67,8 @@ export class FormValidator {
 
   setSubmitButtonState(isValid) {
     this.submitButton.disabled = !isValid;
-    this.submitButton.classList.tog("disabled", !isValid);
+    this.submitButton.classList.toggle(this.selectors.disabledButton);
+
   }
 
   clearForm() {
@@ -61,7 +77,7 @@ export class FormValidator {
   }
 
   getErrorField(inputField) {
-    const fieldName = inputField.dataset.error;
-    return this.errorFields.find((errorField) => errorField.dataset.error === fieldName);
+    const parent = inputField.parentElement;
+    return parent.querySelector(".input-error");
   }
 }
