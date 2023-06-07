@@ -14,9 +14,6 @@ export class FormValidator {
       inputField.addEventListener("input", this.handleInput);
     });
 
-    console.log(this.handleInput)
-    console.log(this.errorFields)
-
     this.enableValidation();
   }
 
@@ -36,10 +33,8 @@ export class FormValidator {
     const inputField = event.target;
     const errorField = this.getErrorField(inputField);
     const isValid = this.setErrorDisplay(inputField, errorField);
-    console.log(errorField)
 
     this.setSubmitButtonState(this.isFormValid());
-    console.log(event)
   }
 
   setErrorDisplay(inputField, errorField) {
