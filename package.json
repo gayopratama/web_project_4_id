@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/gayopratama/web_project_4_id/issues"
   },
-  "homepage": "https://github.com/gayopratama/web_project_4_id#readme"
+  "homepage": "https://github.com/gayopratama/web_project_4_id#readme",
+  "dependencies": {
+    "is-url": "^1.2.4"
+  }
 }

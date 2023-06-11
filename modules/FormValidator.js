@@ -15,6 +15,8 @@ export class FormValidator {
     });
 
     this.enableValidation();
+
+  
   }
 
   enableValidation() {
@@ -35,11 +37,13 @@ export class FormValidator {
     const isValid = this.setErrorDisplay(inputField, errorField);
 
     this.setSubmitButtonState(this.isFormValid());
+
   }
 
   setErrorDisplay(inputField, errorField) {
     let message = []
-    const isValid = inputField.value.length >2;
+    const isValid = inputField.validity.valid;
+    console.log(inputField.validity.valid)
     if (!isValid) {
       errorField.style.display = "block";
       message.push("kolom harus lebih dari 2 karakter")
@@ -57,7 +61,7 @@ export class FormValidator {
   }
 
   isFormValid() {
-    return this.inputFields.every((inputField) => inputField.value.trim() !== "");
+    return this.inputFields.every((inputField) => inputField.validity.valid);
   }
 
   setSubmitButtonState(isValid) {
