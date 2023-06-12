@@ -14,8 +14,9 @@ export class PopUp {
       
 
   popupOpen() {
-    const urlPhoto = this.parentElement.querySelector(".element__photo").src;
-    const urlCaption = this.parentElement.querySelector(".element__caption").textContent;
+
+    const urlPhoto = this.querySelector(".element__photo").src;
+    const urlCaption = this.querySelector(".element__caption").textContent;
     
     document.querySelector(".popup__image").src= urlPhoto;
     document.querySelector(".popup__title").textContent= urlCaption;

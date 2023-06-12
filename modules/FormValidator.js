@@ -51,7 +51,7 @@ export class FormValidator {
 
     } if (inputField.value.length >=40) {
       errorField.style.display = "block";
-      message.push("kolom tidak boleh lebih dari karakter")
+      message.push("kolom tidak boleh lebih dari 40 karakter")
     }
     if (isValid) {
       errorField.style.display = "none";
