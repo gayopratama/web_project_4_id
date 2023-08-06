@@ -1,5 +1,7 @@
-import { Card, CardItems } from "./modules/Card.js";
+import { Card } from "./modules/Card.js";
 import { FormValidator } from "./modules/FormValidator.js";
+import { Section } from "./modules/Section.js";
+
 
 let initialCards = [
   {
@@ -95,14 +97,16 @@ document.querySelector(".form__submit-btn").addEventListener("click", function(e
     const name = document.querySelector("input[name='title']").value;
     const link = document.querySelector("input[name='link']").value;
 
-    initialCards.push({ name, link });
-    const cardSum = new CardItems(initialCards);
-    cardSum._renderCard()
+    //initialCards.push({ name, link });
+    const section = new Section()
+    //const cardSum = new CardItems(initialCards);
+    //cardSum._renderCard()
     e.preventDefault()
     closeCardForm()
   })
 
-const cardItems = new CardItems(initialCards);
+  
+//const cardItems = new CardItems(initialCards);
 const profileForm = new ProfileForm();
 
 const editForm = document.querySelector(".profile__edit-form");
@@ -114,3 +118,17 @@ const editFormValidator = new FormValidator(editForm, {
 const cardFormValidator = new FormValidator(addForm, {
   disabledButton:"form__submit-btn-disabled" 
 });
+
+
+
+
+for (let i = 0; i < initialCards.length; i++) {
+  console.log(initialCards[i]);
+}
+
+
+
+
+//1. Initial Card dapatkan object name dan link
+//2. perlu kirim ke new Card
+//3. new Card masukin ke Section

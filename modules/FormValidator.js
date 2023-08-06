@@ -43,7 +43,6 @@ export class FormValidator {
   setErrorDisplay(inputField, errorField) {
     let message = []
     const isValid = inputField.validity.valid;
-    console.log(inputField.validity.valid)
     if (!isValid) {
       errorField.style.display = "block";
       message.push("kolom harus lebih dari 2 karakter")

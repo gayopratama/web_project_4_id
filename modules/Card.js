@@ -43,35 +43,37 @@ export class Card {
 }
 
 
-export class CardItems {
-  constructor(cardlist) {
-    this._cardlist = cardlist
-    this._renderCard()
-  }
 
-  addCard(){
-    this._cardlist.push({
-      name : titleInput.value,
-      link : linkInput.value
-    })
+
+// export class CardItems {
+//   constructor(cardlist) {
+//     this._cardlist = cardlist
+//     this._renderCard()
+//   }
+
+//   addCard(){
+//     this._cardlist.push({
+//       name : titleInput.value,
+//       link : linkInput.value
+//     })
     
-    this._renderCard()
-  }
+//     this._renderCard()
+//   }
 
-  _renderCard() {
+//   _renderCard() {
 
-    var cards = []
+//     var cards = []
   
-    this._cardlist.forEach((item) => {
+//     this._cardlist.forEach((item) => {
       
-      const card = new Card(item.name, item.link,);
-      const cardElement = card.generateCard()
-      cards.push(cardElement)
+//       const card = new Card(item.name, item.link,);
+//       const cardElement = card.generateCard()
+//       cards.push(cardElement)
     
-    })
+//     })
 
     
-    document.querySelector(".elements").innerHTML = '';
-    document.querySelector(".elements").replaceChildren(...cards);
-  }
-}
+//     document.querySelector(".elements").innerHTML = '';
+//     document.querySelector(".elements").replaceChildren(...cards);
+//   }
+// }
